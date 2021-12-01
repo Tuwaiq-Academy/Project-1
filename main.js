@@ -3,12 +3,15 @@ console.log("Week 4 - Day 4 | Project - 1 [12:08 PM] ");
 $(document).ready(function () {
   const cells = $(".cell");
   const turnSpan = $("#turn");
+
+  const restart=$('#restart')
   // console.log(cells);
   let turn = "X";
   const O = "O";
   const X = "X";
 
   cells.click(cellClicked);
+  restart.click(restartTheGame)
 
   function cellClicked() {
     // console.log(this);
@@ -30,10 +33,15 @@ $(document).ready(function () {
       },250)
     }
   }
+
+  function restartTheGame() { 
+    console.log('restart called');
+    location.reload()
+   }
 });
 
 /*
-  A. Grid Layout [HTML + CSS]
+  STEP 1: Grid Layout [HTML + CSS]
     HTML: use div with id 'board' and 9 div with class 'cell'
     CSS: style grid "board"
     CSS: style width & height "cell"
@@ -44,16 +52,25 @@ $(document).ready(function () {
     CSS: #all display: grid; && justify-content: center;
     CSS: p text-align: center;    
 
-  B. When the player click on one of the cell => Show X || O
+  STEP 2: When the player click on one of the cell => Show X || O
     show click X
     show click X || O (turn variable to switch between turns)
     Show the turn show turn to which player => PLAYER TURN: X || O
     Extra: 
       Invalid move => background red || can't click 
-      
-  NOW. when click on the button 'Play Again' the game will restart or the page will refresh
 
-  C. When the player select 3 Win
+  NOW. when click on the button 'Play Again' the game will restart or the page will refresh (restart the game)
 
-  D. Show who win and a button to "Play Again"
+  STEP 3: When the player select 3 Win (check the winner)
+    Build the logic to check if a player win or not
+    horizontal, vertical, or diagonal
+
+  STEP 4: When a player win 
+    Show who is the winner
+    Hide the 'turn' p
+    Show button say "Play Again" (restart the game)
+    Make this button restart the game (refresh the page)
+
+    Extra:
+      Block clicked on the cell after a player win
 */
