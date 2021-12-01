@@ -1,4 +1,4 @@
-console.log("Week 4 - Day 4 | Project - 1 [12:08 PM] ");
+console.log("Week 4 - Day 4 | Project - 1 [12:28 PM] ");
 
 $(document).ready(function () {
   const cells = $(".cell");
