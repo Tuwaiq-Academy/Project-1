@@ -2,3 +2,23 @@
   color:green;
   font-size: 20px;
 }
+#all{
+  display: grid;
+  justify-content: center;
+}
+#board{
+  display: grid;
+  /* grid-template-columns: 100px,100px,100px; */
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+}
+.cell{
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 80px;
+}
+p{
+  text-align: center;
+}
