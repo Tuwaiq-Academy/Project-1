@@ -22,3 +22,8 @@
 p{
   text-align: center;
 }
+
+#parWinner{
+ font-weight: bold;
+ color: blue;
+}
